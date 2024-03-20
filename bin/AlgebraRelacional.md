@@ -2,6 +2,10 @@ Segue as quatro operações base de banco de dados:
 
 # PRODUTO CARTESIANO (permite cruzamento entre dados de objetos):
 
+    SELECT: Recupera dados de um banco
+    FROM: Indica de qual tabela ou tabelas você deseja selecionar os dados.
+
+
     SELECT * (busca e projeta todos os dados)
     FROM PRODUCT (tabela 1), CATEGORY (tabela 2)
 
@@ -26,6 +30,8 @@ Segue as quatro operações base de banco de dados:
                     p3.atributo1 = 3;    cat2.atributo2 = 3;
 
 # JUNÇÃO
+
+    WHERE: 
 
     SELECT *                                          SELECT *
     FROM PRODUCT, CATEGORY                        ou  FROM PRODUCT, CATEGORY
