@@ -31,12 +31,15 @@ Segue as quatro operações base de banco de dados:
 
 # JUNÇÃO
 
-    WHERE: 
+    WHERE: Filtra resultados com base em condição específica. 
+    INNER JOIN: outra alternativa para filtrar valores, mas voltado para combinar valores de duas tabelas.
+
+    DIFERENÇA: Where é utilizado para filtrar os resultados de consulta em uma tabela e inner join é mais legível para combinar linhas de duas tabelas.
 
     SELECT *                                          SELECT *
     FROM PRODUCT, CATEGORY                        ou  FROM PRODUCT, CATEGORY
-    WHERE                                             INNER JOIN CATEGORY apelido (cria um apelido p/ a classe)
-        PRODUCT.ATRIBUTO1 = CATEGORY.ATRIBUTO2        ON PRODUCT.ATRIBUTO1 = apelido.ATRIBUTO2  
+    WHERE                                             INNER JOIN CATEGORY
+        PRODUCT.ATRIBUTO1 = CATEGORY.ATRIBUTO2        ON PRODUCT.ATRIBUTO1 = CATEGORY.ATRIBUTO2  
 
         (ao fazer isso, você filtra a tabela para que permaneça apenas os dados em comum de cada objeto)
         EX ANTES: a mesma tabela com o cruzamento formado anteriormente na junção de dados:
@@ -57,14 +60,13 @@ Segue as quatro operações base de banco de dados:
 
 # RESTRINÇÃO
 
-    - Adiciona uma restrição a partir de uma carcaterística, nesse exemplo, foi a partir de um terceiro atributo (tag)
-      onde está presente apenas naqueles que apresentam número ímpares:
+    - Adiciona uma restrição a partir de uma característica, nesse exemplo, teve uma junção de linhas entre duas tabelas e desse conjunto de linhas se tem um filtro presente apenas naqueles que apresentam número ímpares:
 
     SELECT *
     FROM PRODUCT, CATEGORY
     INNER JOIN CATEGORY apelido 
     ON PRODUCT.ATRIBUTO1 = apelido.ATRIBUTO2  
-    WHERE CATEGORY.NAME (outro atributo) = "ímpares"
+    WHERE CATEGORY.NUMBER = "ímpares" // restrição em que é filtrado apenas valores ímpares do atributo 'number'
 
     (não pode usar a expressão "WHERE" tanto para a junção e a restrição ao mesmo tempo,
     nesse caso, utilizei "INNER JOIN ../ON .." para a junção e "WHERE" para a restrinção)

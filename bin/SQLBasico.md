@@ -31,7 +31,7 @@ Segue as quatro operações base de banco de dados:
 
 # JUNÇÃO
 
-    WHERE: 
+    WHERE: Filtra resultados com base em condição específica. Exemplo:
 
     SELECT *                                          SELECT *
     FROM PRODUCT, CATEGORY                        ou  FROM PRODUCT, CATEGORY
@@ -57,14 +57,16 @@ Segue as quatro operações base de banco de dados:
 
 # RESTRINÇÃO
 
-    - Adiciona uma restrição a partir de uma carcaterística, nesse exemplo, foi a partir de um terceiro atributo (tag)
+    INNER JOIN: outra alternativa para acrescentar valores
+
+    - Adiciona uma restrição a partir de uma carcaterística, nesse exemplo, foi a partir de um terceiro atributo 
       onde está presente apenas naqueles que apresentam número ímpares:
 
     SELECT *
     FROM PRODUCT, CATEGORY
     INNER JOIN CATEGORY apelido 
     ON PRODUCT.ATRIBUTO1 = apelido.ATRIBUTO2  
-    WHERE CATEGORY.NAME (outro atributo) = "ímpares"
+    WHERE CATEGORY.NUMBER = "ímpares" // restrição em que é filtrado apenas valores ímpares do atributo 'number'
 
     (não pode usar a expressão "WHERE" tanto para a junção e a restrição ao mesmo tempo,
     nesse caso, utilizei "INNER JOIN ../ON .." para a junção e "WHERE" para a restrinção)
