@@ -4,13 +4,13 @@
 ![sql](https://github.com/marcelopetroni/AnotacoesSQL/assets/105806830/f7a0a6dd-fe14-4214-9058-6032c3d810dd)
 
 - União (Union): Une dados de duas tabelas independente de uma condição específica. <br/>
-  
-  SELECT coluna1, coluna2
-  FROM tabela1
-  UNION
-  SELECT coluna1, coluna2
-  FROM tabela2;
-  
+  <br/>
+  SELECT coluna1, coluna2<br/>
+  FROM tabela1<br/>
+  UNION<br/>
+  SELECT coluna1, coluna2<br/>
+  FROM tabela2;<br/>
+  <br/>
 - Intersecção: Filtra linhas correspondentes por alguma condição em duas tabelas.
 - Diferença: Filtra a exceção, uma valor não específicado na condição.
 - Produto cartesiano: Multiplica o número de linhas em uma tabela resultante.
