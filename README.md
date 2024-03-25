@@ -29,5 +29,5 @@
 <br/>
   SELECT coluna1, coluna2<br/>
   FROM tabela1<br/>
-  JOIN tabela2 ON tabela1.coluna = tabela2.coluna; // une linhas com valores correspondentes das respectivas colunas da tabela 1 e 2.<br/>
+  JOIN tabela2 ON tabela1.coluna = tabela2.coluna; <br/>// une linhas com valores correspondentes das respectivas colunas da tabela 1 e 2.
 
