@@ -114,7 +114,7 @@ Segue as quatro operações base de banco de dados:
         FROM PRODUCT                             --> referência da tabela
         INNER JOIN CATEGORY                      --> filtro de dados a partir de valores em comum nos respectivos 
         ON PRODUCT.ATRIBUTO1 = CATEGORY.ATRIBUTO2  
-        WHERE CATEGORY.ATRIBUTO3 = "ímpares"    --> outro filtro de restrição a partir de um valor específico de um 
+        WHERE CATEGORY.ATRIBUTO1 % 2 != 0       --> outro filtro de restrição a partir de um valor específico de um 
                                                     atributo 
                                                 --> apenas mostra as junções que apresentam essa restrinção
 
