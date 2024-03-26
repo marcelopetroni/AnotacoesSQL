@@ -17,6 +17,3 @@ DCL (DATA CONTROL LANGUAGE)
 - Fazem cadastro de usuários e determinam seu nível de privilégio para os objetos do banco.
 - Comandos utilizados:  GRANT e REVOKE.
 
-TIPOS DE DADOS:
-CHAR(n): um ou mais caracteres que formam uma string, no lugar do 'n' definido o nº FIXO da string.
-VARCHAR(n): um ou mais caracteres que formam uma string, porém o valor de 'n' é VARIÁVEL, ideal para strings com valores flexíveis.
