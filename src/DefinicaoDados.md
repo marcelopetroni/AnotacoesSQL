@@ -44,3 +44,15 @@ salario decimal(10,2) // CHECK(salario>350) verifica valores inválidos, tentar 
 endereco varchar(30)
 sexo char(1) // "CHECK( sexo in (‘M’, ‘F’) )" para restringir a valores específicos,
 cidade varchar(10) // "DEFAULT 'São Paulo’" para definir valores DEFAULT e evitar nulos também)
+
+
+# CRUD DDD
+
+Alterando valores:
+- criação:
+alter table T
+add A1 D1
+
+- atualização:
+alter table T
+alter A1 to nA1
