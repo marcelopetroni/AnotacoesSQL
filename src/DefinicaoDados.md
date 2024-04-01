@@ -40,7 +40,7 @@ EXEMPLO:
 create table funcionario
 (nome char(30),  // "NOT NULL" após parentêses para estabelecer atributo como obrigatório e evitar valores nulos.
 rg decimal(9),
-salario decimal(10,2)
+salario decimal(10,2) // CHECK(salario>350) verifica valores inválidos, tentar inserir dados fora da condição estabelecida, ocorre um erro e não é inserido
 endereco varchar(30)
 sexo char(1) // "CHECK( sexo in (‘M’, ‘F’) )" para restringir a valores específicos,
 cidade varchar(10) // "DEFAULT 'São Paulo’" para definir valores DEFAULT e evitar nulos também)
