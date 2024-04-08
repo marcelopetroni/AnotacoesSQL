@@ -45,14 +45,44 @@ endereco varchar(30)
 sexo char(1) // "CHECK( sexo in (‘M’, ‘F’) )" para restringir a valores específicos,
 cidade varchar(10) // "DEFAULT 'São Paulo’" para definir valores DEFAULT e evitar nulos também)
 
+# DDL
+- Create: Permite criar objetos
+- Create Domain: declara um nome de domínio para ser usado como tipo, veja:
 
-# CRUD DDD
+CREATE DOMAIN nome as CHAR(4)
+CREATE DOMAIN nome2 as INTEGER // Cria o tipo nome2
+CHECK (nome2 > 0 AND nome2 < 21) // Verifica condição para o tipo
+
+CREATE TABLE FUNCIONARIO ( 
+    atributo tipo(tamanho)
+)
 
 Alterando valores:
-- criação:
-alter table T
-add A1 D1
+ALTER TABLE FUNCIONARIO
+ALTER atributo SET DEFAULT 'valorInicial' // Define valor inicial para aquele atributo
 
-- atualização:
-alter table T
-alter A1 to nA1
+- Deletando colunas:
+ALTER TABLE FUNCIONARIO
+DROP endereco CASCADE // apaga coluna e suas dependências de outras tabelas (cuidado)
+
+ALTER TABLE FUNCIONARIO
+DROP endereco RESTRICT // apaga coluna se não tiver dependências de outra tabela
+Obs: DROP permite apagar esquemas, tabelas, colunas, etc.
+
+- Atualização:
+ALTER TABLE FUNCIONARIO
+ALTER A1 to A2
+
+# DML
+INSERT: insere tuplas em uma relação
+INSERT INTO FUNCIONARIO(ident, nome, sobrenome, numero) // é opcional especificar o tipo
+VALUES('1164', 'Jorge', 'Vila Verde', '1')
+
+UPDATE: Modifica valores de uma tupla em uma relação
+UPDATE FUNCIONARIO
+SET localizacao ='Minas Gerais', numero = '5'
+WHERE numero = '1' // condição que indica a tupla a ser alterada (para o novo valor definido no set)
+
+DELETE: Remove tuplas de uma relação
+DELETE FROM FUNCIONARIO
+WHERE campo = 'valor' // deleta valores a patir de condições específicadas, nesse caso apaga campos que tenham o 'valor' inseridos.
