@@ -115,6 +115,7 @@ MAX(salario) -> maior
 MIN(salario) -> menor
 AVG(salario) -> media
 
+COUNT(*): Conta número de ocorrências
 GROUP BY: agregar dados
 HAVING: Filtra dados agregados (só é utilizado em conjunto com gruoup by)
 
