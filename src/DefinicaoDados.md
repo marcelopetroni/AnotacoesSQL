@@ -86,3 +86,39 @@ WHERE numero = '1' // condição que indica a tupla a ser alterada (para o novo 
 DELETE: Remove tuplas de uma relação
 DELETE FROM FUNCIONARIO
 WHERE campo = 'valor' // deleta valores a patir de condições específicadas, nesse caso apaga campos que tenham o 'valor' inseridos.
+
+# DQL 
+- Estrutura básica de uma consulta:
+SELECT <atributos>
+FROM <tabelas>
+WHERE <condição>
+
+SELECT * (asterisco significa todos os atributos)
+SELECT distinct (evita tuplas repetidas)
+
+- Apelidos: use 'as' para definir o novo nome da tabela:
+FROM ALUNO as A (renomeou para 'A')
+
+- Operadores de conjunto:
+UNION, EXCEPT e INTERSECT
+
+LIKE: filtra strings
+% : qualquer quantidade de chars
+_ : qualquer 1 char
+lower(), uper()
+
+INNER JOIN/ JOIN: Junção de tabelas
+
+- Funções agregadas:
+SUM(salario) -> soma
+MAX(salario) -> maior
+MIN(salario) -> menor
+AVG(salario) -> media
+
+GROUP BY: agregar dados
+HAVING: Filtra dados agregados (só é utilizado em conjunto com gruoup by)
+
+SELECT nome_aluno, AVG(nota) AS media_notas
+FROM alunos
+GROUP BY nome_aluno // filtra pelo nome do aluno
+HAVING AVG(nota) > 7; // aqueles que média de notas maior que 7
